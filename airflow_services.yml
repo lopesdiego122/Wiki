@@ -1,1 +1,23 @@
 
+
+CREATE TABLE taxi_trips (
+    trip_id                 INT,
+    vendor_id               VARCHAR(3),
+    pickup_datetime         TIMESTAMP,
+    dropoff_datetime        TIMESTAMP,
+    passenger_count         SMALLINT,
+    trip_distance           DECIMAL(18,6),
+    pickup_latitude         DECIMAL(18,14),
+    pickup_longitude        DECIMAL(18,14),
+    rate_code_id            SMALLINT,
+    store_and_fwd_flag      VARCHAR(1),
+    dropoff_longitude       DECIMAL(18,14),
+    dropoff_latitude        DECIMAL(18,14),
+    payment_type            VARCHAR(3),
+    fare_amount             DECIMAL(18,6),
+    surcharge   			DECIMAL(18,6),
+    tip_amount              DECIMAL(18,6),
+    tolls_amount            DECIMAL(18,6),
+    extra                   DECIMAL(18,6),
+    total_amount            DECIMAL(18,6),
+);   
