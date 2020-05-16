@@ -1,0 +1,10 @@
+dagname: DataSprints
+schedule_interval: '0 3 * * *'
+description :
+etlflow: 
+  job1:
+    task_Dummy: 
+      tasktype: DummyOperator
+      task_id: Dummy
+      depends_on_task:
+      retries: 3
