@@ -1,0 +1,38 @@
+rem # *************************************************************
+rem # Data Criacao..: 16/05/2020  Autor: Diego Lopes
+rem # Versao 1.0....: Ambiente Airflow DataSprints Teste
+rem # Requisitos Docker instalado e rodando
+rem # *************************************************************
+rem
+echo off
+cls
+echo "#*************************************************************"
+echo "# 	INSTALACAO DO AMBIENTE AIRFLOW	"
+echo "#*************************************************************"
+echo ""
+echo "Importando as imagens do Docker para o Airflow"
+docker load -i img\airflow.tar
+echo ""
+echo "Importando imagem Redis"
+docker load -i img\redis.tar
+echo ""
+echo "Importando imagem do PostgreSQL"
+docker load -i img\postgres.tar
+echo ""
+echo "Criando a estrutura de pastas:"
+echo "DAGs Airflow"
+mkdir C:\Programas\Docker\airflow
+echo "Criando pasta para os arquivos YML"
+mkdir C:\Programas\Docker\airflow\config
+echo "Copiando DAG e YML."
+copy air\DagCode.py C:\Programas\Docker\airflow
+echo "DAG DataSprints copiada."
+copy air\DataSprints.yml C:\Programas\Docker\airflow\config
+echo "Arquivo YML copiado."
+echo "Criando o ambiente Airflow"
+docker-compose.exe -f .\airflow_services.yml up -d
+echo ""
+echo "Ambiente instalado. Acesso o Airflow com o endereco **** http://localhost *** em seu navegador."
+echo "Iniciando o chrome"
+start chrome http://localhost/admin/
+pause
