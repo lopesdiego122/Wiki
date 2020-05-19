@@ -1,0 +1,1 @@
+cat 1.json |jq '.trip_id,.vendor_id,.pickup_datetime,.dropoff_datetime,.passenger_count,.trip_distance,.pickup_latitude,.pickup_longitude,.rate_code_id,.store_and_fwd_flag,.dropoff_longitude,.dropoff_latitude,.payment_type,.fare_amount,.surcharge,.tip_amount,.tolls_amount,.extra,.total_amount'
