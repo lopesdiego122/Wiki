@@ -1,1 +1,21 @@
 cat 1.json |jq '.trip_id,.vendor_id,.pickup_datetime,.dropoff_datetime,.passenger_count,.trip_distance,.pickup_latitude,.pickup_longitude,.rate_code_id,.store_and_fwd_flag,.dropoff_longitude,.dropoff_latitude,.payment_type,.fare_amount,.surcharge,.tip_amount,.tolls_amount,.extra,.total_amount'
+null
+"CMT"
+"2009-04-21T18:51:11.767205+00:00"
+"2009-04-21T18:57:09.433767+00:00"
+2
+0.8
+40.74295
+-74.004114
+null
+null
+-73.994712
+40.74795
+"Cash"
+5.4
+0
+0
+0
+null
+5.4
+null
