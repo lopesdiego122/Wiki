@@ -1,0 +1,12 @@
+def cast_int_to_str(dataset):
+    columns = df.columns
+
+    for column in columns:
+        df[column] = df[column].astype('str')
+
+    return df.to_json(orient='records')
+
+
+df = pd.read_json('data.json')
+df = cast_int_to_str(df)
+print(df)
