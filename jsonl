@@ -1,0 +1,33 @@
+{"trip_distance": 0.8, "tolls_amount": 0, "pickup_datetime": "2009-04-21T18:51:11.767205+00:00", "tip_amount": 0, "total_amount": 5.4, "vendor_id": "CMT", "fare_amou
+nt": 5.4, "pickup_longitude": -74.004114, "dropoff_longitude": -73.994712, "passenger_count": 2, "surcharge": 0, "dropoff_datetime": "2009-04-21T18:57:09.433767+00:0
+0", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.74295, "dropoff_latitude": 40.74795, "payment_type": "Cash"}
+{"trip_distance": 5.4, "tolls_amount": 0, "pickup_datetime": "2009-01-13T07:40:07.639754+00:00", "tip_amount": 0, "total_amount": 15.4, "vendor_id": "CMT", "fare_amo
+unt": 15.4, "pickup_longitude": -73.996506, "dropoff_longitude": -73.940449, "passenger_count": 1, "surcharge": 0, "dropoff_datetime": "2009-01-13T07:50:36.386011+00
+:00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.747784, "dropoff_latitude": 40.792385, "payment_type": "Cash"}
+{"trip_distance": 1.67, "tolls_amount": 0, "pickup_datetime": "2009-01-06T19:30:44.142187+00:00", "tip_amount": 0, "total_amount": 7.1, "vendor_id": "VTS", "fare_amo
+unt": 6.1, "pickup_longitude": -73.95134, "dropoff_longitude": -73.944535, "passenger_count": 5, "surcharge": 1, "dropoff_datetime": "2009-01-06T19:43:09.908429+00:0
+0", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.75207, "dropoff_latitude": 40.768108, "payment_type": "CASH"}
+{"trip_distance": 4.13, "tolls_amount": 0, "pickup_datetime": "2009-09-24T08:28:09.004451+00:00", "tip_amount": 0, "total_amount": 13.4, "vendor_id": "VTS", "fare_am
+ount": 12.9, "pickup_longitude": -74.001117, "dropoff_longitude": -73.958122, "passenger_count": 1, "surcharge": 0.5, "dropoff_datetime": "2009-09-24T08:41:56.739991
++00:00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.729128, "dropoff_latitude": 40.721812, "payment_type": "CASH"}
+{"trip_distance": 2.03, "tolls_amount": 0, "pickup_datetime": "2009-10-29T05:50:39.214629+00:00", "tip_amount": 0, "total_amount": 8.2, "vendor_id": "VTS", "fare_amo
+unt": 7.7, "pickup_longitude": -73.9766, "dropoff_longitude": -73.979757, "passenger_count": 1, "surcharge": 0.5, "dropoff_datetime": "2009-10-29T05:57:22.880174+00:
+00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.756873, "dropoff_latitude": 40.776075, "payment_type": "CASH"}
+{"trip_distance": 1.15, "tolls_amount": 0, "pickup_datetime": "2009-10-23T17:14:45.661393+00:00", "tip_amount": 0, "total_amount": 6.5, "vendor_id": "VTS", "fare_amo
+unt": 6.5, "pickup_longitude": -73.994665, "dropoff_longitude": -73.978623, "passenger_count": 1, "surcharge": 0, "dropoff_datetime": "2009-10-23T17:23:51.913687+00:
+00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.750528, "dropoff_latitude": 40.750478, "payment_type": "CASH"}
+{"trip_distance": 8.61, "tolls_amount": 4.15, "pickup_datetime": "2009-03-30T09:41:23.359373+00:00", "tip_amount": 0, "total_amount": 26.25, "vendor_id": "VTS", "far
+e_amount": 22.1, "pickup_longitude": -73.955462, "dropoff_longitude": -73.870838, "passenger_count": 1, "surcharge": 0, "dropoff_datetime": "2009-03-30T09:47:12.9083
+95+00:00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.772843, "dropoff_latitude": 40.774042, "payment_type": "CASH"}
+{"trip_distance": 0.84, "tolls_amount": 0, "pickup_datetime": "2009-03-18T17:56:30.217996+00:00", "tip_amount": 2, "total_amount": 7.7, "vendor_id": "VTS", "fare_amo
+unt": 5.7, "pickup_longitude": -73.976158, "dropoff_longitude": -73.985112, "passenger_count": 5, "surcharge": 0, "dropoff_datetime": "2009-03-18T18:02:40.735727+00:
+00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.757998, "dropoff_latitude": 40.759317, "payment_type": "Credit"}
+{"trip_distance": 1.04, "tolls_amount": 0, "pickup_datetime": "2009-03-30T13:21:23.577454+00:00", "tip_amount": 0, "total_amount": 6.1, "vendor_id": "VTS", "fare_amo
+unt": 6.1, "pickup_longitude": -73.988585, "dropoff_longitude": -73.975072, "passenger_count": 2, "surcharge": 0, "dropoff_datetime": "2009-03-30T13:32:11.850561+00:
+00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.764408, "dropoff_latitude": 40.761585, "payment_type": "CASH"}
+{"trip_distance": 0.75, "tolls_amount": 0, "pickup_datetime": "2009-02-20T18:06:37.232527+00:00", "tip_amount": 0, "total_amount": 3.7, "vendor_id": "VTS", "fare_amo
+unt": 3.7, "pickup_longitude": -74.001978, "dropoff_longitude": -73.993722, "passenger_count": 5, "surcharge": 0, "dropoff_datetime": "2009-02-20T18:11:48.973565+00:
+00", "store_and_fwd_flag": null, "rate_code": null, "pickup_latitude": 40.740683, "dropoff_latitude": 40.74733, "payment_type": "CASH"}
+{"trip_distance": 1.11, "tolls_amount": 0, "pickup_datetime": "2009-06-27T16:40:08.347535+00:00", "tip_amount": 0, "total_amount": 6.7, "vendor_id": "VTS", "fare_amo
+unt": 5.7, "pickup_longitude": 0, "dropoff_longitude": 0, "passenger_count": 2, "surcharge": 1, "dropoff_datetime": "2009-06-27T16:51:08.73372+00:00", "store_and_fwd
+_flag": null, "rate_code": null, "pickup_latitude": 0, "dropoff_latitude": 0, "payment_type": "CASH"}
