@@ -7,54 +7,54 @@ etlflow:
       tasktype: DummyOperator
       task_id: ExtractJson
       depends_on_task:
-      retries: 1
+      retries: 0
     task_ExtractCsv: 
       tasktype: DummyOperator
       task_id: ExtractCsv
       depends_on_task:
-      retries: 1
+      retries: 0
     task_ExtractJson2009:
       tasktype: BashOperator
       task_id: ExtractJson2009
       depends_on_task:
         - ExtractJson
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2009-json_corrigido.json" > /usr/local/airflow/files/2009.json 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2009-json_corrigido.json" > /home/airflow/gcs/data/2009_file.json 
+      retries: 0
     task_ExtractJson2010:
       tasktype: BashOperator
       task_id: ExtractJson2010
       depends_on_task:
         - ExtractJson
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2010-json_corrigido.json" > /usr/local/airflow/files/2010.json 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2010-json_corrigido.json" > /home/airflow/gcs/data/2010_file.json 
+      retries: 0
     task_ExtractJson2011:
       tasktype: BashOperator
       task_id: ExtractJson2011
       depends_on_task:
         - ExtractJson
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2011-json_corrigido.json" > /usr/local/airflow/files/2011.json 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2011-json_corrigido.json" > /home/airflow/gcs/data/2011_file.json 
+      retries: 0
     task_ExtractJson2012:
       tasktype: BashOperator
       task_id: ExtractJson2012
       depends_on_task:
         - ExtractJson
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2012-json_corrigido.json" > /usr/local/airflow/files/2012.json 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-sample_data-nyctaxi-trips-2012-json_corrigido.json" > /home/airflow/gcs/data/2012_file.json 
+      retries: 0
     task_ExtractVendorCSV:
       tasktype: BashOperator
       task_id: ExtractVendorCSV
       depends_on_task:
         - ExtractCsv
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-vendor_lookup-csv.csv" > /usr/local/airflow/files/vendor.csv 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-vendor_lookup-csv.csv" > /home/airflow/gcs/data/vendor.csv 
+      retries: 0
     task_ExtractPaymentCSV:
       tasktype: BashOperator
       task_id: ExtractPaymentCSV
       depends_on_task:
         - ExtractCsv
-      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-payment_lookup-csv.csv" > /usr/local/airflow/files/payment.csv 
-      retries: 1
+      command: curl -k -X GET "https://s3.amazonaws.com/data-sprints-eng-test/data-payment_lookup-csv.csv" > /home/airflow/gcs/data/payment.csv 
+      retries: 0
     task_CleanFile: 
       tasktype: DummyOperator
       task_id: CleanFile
@@ -65,59 +65,119 @@ etlflow:
         - ExtractJson2012
         - ExtractPaymentCSV
         - ExtractVendorCSV
-      retries: 1
+      retries: 0
     task_CleanPayment:
       tasktype: BashOperator
       task_id: CleanPayment
       depends_on_task:
         - CleanFile
-      command: sed -i '1d' /usr/local/airflow/files/payment.csv 
-      retries: 1
+      command: sed -i '1d' /home/airflow/gcs/data/payment.csv 
+      retries: 0
+    task_CleanJson2009:
+      tasktype: BashOperator
+      task_id: CleanJson2009
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2009.py
+      retries: 0
+    task_CleanJson2010:
+      tasktype: BashOperator
+      task_id: CleanJson2010
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2010.py
+      retries: 0
+    task_CleanJson2011:
+      tasktype: BashOperator
+      task_id: CleanJson2011
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2011.py
+      retries: 0
+    task_CleanJson2012:
+      tasktype: BashOperator
+      task_id: CleanJson2012
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2012.py
+      retries: 0
+     task_Json2Jsonl_2009:
+      tasktype: BashOperator
+      task_id: Json2Jsonl_2009
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2012.py
+      retries: 0
+    task_Json2Jsonl_2010:
+      tasktype: BashOperator
+      task_id: CleanJson2010
+      depends_on_task:
+        - CleanFile
+      command: python /home/airflow/gcs/data/CleanJson_2012.py
+      retries: 0
+    task_Json2Jsonl_2011:
+      tasktype: BashOperator
+      task_id: Json2Jsonl_2011
+      depends_on_task:
+        - CleanJson2011
+      command: python /home/airflow/gcs/data/CleanJson_2012.py
+      retries: 0
+    task_Json2Jsonl_2012:
+      tasktype: BashOperator
+      task_id: Json2Jsonl_2012
+      depends_on_task:
+        - CleanJson2012
+      command: python /home/airflow/gcs/data/CleanJson_2012.py
+      retries: 0
     task_LoadData_Google: 
       tasktype: DummyOperator
       task_id: LoadData_Google
       depends_on_task:
         - CleanPayment
-      retries: 1
+        - Json2Jsonl_2009
+        - Json2Jsonl_2010
+        - Json2Jsonl_2011
+        - Json2Jsonl_2012
+      retries: 0
     task_LoadPaymentCSV:
       tasktype: BashOperator
       task_id: LoadPaymentCSV
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/payment.csv gs://bucket_datasprints
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/payment.csv gs://bucket_datasprints
+      retries: 0
     task_LoadVendorCSV:
       tasktype: BashOperator
       task_id: LoadVendorCSV
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/vendor.csv gs://bucket_datasprints 
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/vendor.csv gs://bucket_datasprints 
+      retries: 0
     task_Load2009Json:
       tasktype: BashOperator
       task_id: Load2009Json
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/2009.json gs://bucket_datasprints  
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/2009_jsonl.json gs://bucket_datasprints  
+      retries: 0
     task_Load2010Json:
       tasktype: BashOperator
       task_id: Load2010Json
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/2010.json gs://bucket_datasprints 
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/2010_jsonl.json gs://bucket_datasprints 
+      retries: 0
     task_Load2011Json:
       tasktype: BashOperator
       task_id: Load2011Json
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/2011.json gs://bucket_datasprints 
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/2011_jsonl.json gs://bucket_datasprints 
+      retries: 0
     task_Load2012Json:
       tasktype: BashOperator
       task_id: Load2012Json
       depends_on_task:
         - LoadData_Google
-      command: /usr/local/airflow/google-cloud-sdk/bin/gsutil cp /usr/local/airflow/files/2012.json gs://bucket_datasprints  
-      retries: 1
+      command: gsutil cp /home/airflow/gcs/data/2012_jsonl.json gs://bucket_datasprints  
+      retries: 0
