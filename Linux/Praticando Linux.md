@@ -1,10 +1,10 @@
-#####Pré requisitos
+##### Pré requisitos
 
 Veja [Docker Install](https://docs.docker.com/docker-for-windows/install/) **Logar e docker estar com status running**
 
 
 
-#####Ubuntu docker
+##### Ubuntu docker
 
 ```
 docker search ubuntu
@@ -25,9 +25,9 @@ docker run ubuntu
 docker run -i -t ubuntu /bin/bash
 ```
 
-#####Referência - https://lisha.ufsc.br/dl2172
+##### Referência - https://lisha.ufsc.br/dl2172
 
-#####Listando conteudo
+##### Listando conteudo
 ```
 ls (list directory contents)
 
@@ -105,7 +105,7 @@ root@3c435b57cbf2:/home# cd ..
 root@3c435b57cbf2:/#
 
 ```
-#####Exibindo mensagem no terminal
+##### Exibindo mensagem no terminal
 ```
 echo (display a line of text)
 
@@ -119,7 +119,7 @@ root@3c435b57cbf2:/home# echo "A mensagem entre aspas passa um argumento"
 A mensagem entre aspas passa um argumento
 ```
 
-#####Retornando o diretório em que estamos
+##### Retornando o diretório em que estamos
 ```
 pwd ( print name of current/working directory)
 
@@ -128,7 +128,7 @@ root@3c435b57cbf2:/home# pwd
 
 ```
 
-#####Criando arquivo
+##### Criando arquivo
 ```
 touch (change file timestamps)
 
@@ -136,14 +136,14 @@ root@3c435b57cbf2:/home# touch teste.txt
 root@3c435b57cbf2:/home#
 ```
 
-#####Confira o arquivo criado 
+##### Confira o arquivo criado 
 ```
 root@3c435b57cbf2:/home# ls -ltrh
 total 0
 -rw-r--r-- 1 root root 0 Apr 16 01:03 teste.txt
 ```
 
-#####Criando arquivo com echo
+##### Criando arquivo com echo
 ```
 
 root@3c435b57cbf2:/home# echo "Bem vindo!" > teste2.txt
@@ -155,12 +155,12 @@ total 4.0K
 -rw-r--r-- 1 root root 11 Apr 16 01:08 teste2.txt  
 ```
 
-#####Inserindo informações em um arquivo
+##### Inserindo informações em um arquivo
 ```
 root@3c435b57cbf2:/home# echo "Ola!" >> teste2.txt
 root@3c435b57cbf2:/home#
 ```
-#####Exibindo o conteúdo de um arquivo
+##### Exibindo o conteúdo de um arquivo
 ```
 cat (concatenate files and print on the standard output)
 
@@ -168,7 +168,7 @@ root@3c435b57cbf2:/home# cat teste2.txt
 Bem vindo!
 Ola!
 ```
-#####Removendo arquivo
+##### Removendo arquivo
 ```
 rm (remove files or directories)
 
@@ -181,7 +181,7 @@ root@3c435b57cbf2:/home# ls
 teste2.txt
 
 ```
-#####Criando diretorio
+##### Criando diretorio
 ```
 mkdir (make directories)
 
@@ -192,7 +192,7 @@ teste2.txt  workspace
 ```
 mkdir -p /temp/temp1/temp2
 ```
-#####Copiando arquivo
+##### Copiando arquivo
 ```
 cp (copy files and directories)
 
@@ -202,7 +202,7 @@ root@3c435b57cbf2:/home# cp teste2.txt copiateste2.txt
 root@3c435b57cbf2:/home# ls
 copiateste2.txt  teste2.txt  workspace
 ```
-#####Copiando para dentro de um diretório
+##### Copiando para dentro de um diretório
 ```
 root@3c435b57cbf2:/home# cp *txt workspace
 root@3c435b57cbf2:/home# cd workspace/
@@ -211,25 +211,25 @@ copiateste2.txt  teste2.txt
 
 ```
 
-#####Renomenando arquivo (não disponível no Docker)
+##### Renomenando arquivo (não disponível no Docker)
 #####Talvez seja necessário instalar (será pedida a senha do root), no Ubuntu digite:
 ```
 ~$ sudo apt-get install rename
 ```
-#####Renomeando miltiplos arquivos
+##### Renomeando miltiplos arquivos
 ```
 rename (rename multiple files)
 
-ParanaBanco@ParanaBanco:~/Documentos$ ls
+username@username:~/Documentos$ ls
 lista.txt
 
-ParanaBanco@ParanaBanco:~/Documentos$ touch teste.txt teste1.txt teste3.txt
+username@username:~/Documentos$ touch teste.txt teste1.txt teste3.txt
 
-ParanaBanco@ParanaBanco:~/Documentos$ ls
+username@username:~/Documentos$ ls
 lista.txt  teste1.txt  teste3.txt  teste.txt
 
-ParanaBanco@ParanaBanco:~/Documentos$ rename 's/.txt/.doc/' *.txt
-ParanaBanco@ParanaBanco:~/Documentos$ ls
+username@username:~/Documentos$ rename 's/.txt/.doc/' *.txt
+username@username:~/Documentos$ ls
 lista.doc  teste1.doc  teste3.doc  teste.doc
 
 ```
@@ -432,7 +432,7 @@ Server Nexcore Postgres
 SERVIDOR_PROD_BD_NEXCORE_IP     = 192.168.100.24
 SERVIDOR_PROD_BD_NEXCORE_PORTA  = 5432
 SERVIDOR_PROD_BD_NEXCORE_NOME   = ncall
-SERVIDOR_PROD_BD_NEXCORE_LOGIN  = paranabanco_bd
+SERVIDOR_PROD_BD_NEXCORE_LOGIN  = username_bd
 SERVIDOR_PROD_BD_NEXCORE_SENHA
 SERVIDOR_PROD_BD
 ```
@@ -582,7 +582,6 @@ Swap:          2047          29        2018
 ```
 #####Usando o VI
 (VICheatsheet)[http://www.atmos.albany.edu/daes/atmclasses/atm350/vi_cheat_sheet.pdf]
-
 
 
 
